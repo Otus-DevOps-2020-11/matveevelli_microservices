@@ -1,5 +1,16 @@
 # matveevelli_microservices
 
+###Домашняя работа №15
+
+- Создана ВМ я yc с докер-хост
+- Добавлены каталоги из архива reddit-microservices
+- Созданы dockerfile для микросервисов
+- Создана docker-bridge сеть
+- Запущены контейнеры и проверена работоспособность
+- Переименованы сетевые алиасы на reddit_post и reddit_comment, переопределение происходит через ENV переменные в docker run `docker run -d --network=reddit -p 9292:9292 --env POST_SERVICE_HOST=reddit_post --env COMMENT_SERVICE_HOST=reddit_comment matveevelli/ui:5.0`
+- Улучшен образ микросервиса на основе alpine, 265MB
+- Создан volume для mongodb
+
 ###Домашняя работа №14
 
 - Установил docker, docker-compose, docker-machine
